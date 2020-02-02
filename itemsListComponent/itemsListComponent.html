@@ -1,0 +1,12 @@
+
+<div class = "flex-hor">
+    <div>
+        <item-component class="card" ng-repeat="i in shoppingList" shop-item="i" into-cart = "addToCart(i)">
+        </item-component>
+    </div>
+    <div>
+        <br><br>
+        <h3>No of items in cart: {{cart.length}}</h3>
+    </div>
+</div>
+
