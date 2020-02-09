@@ -7,15 +7,20 @@
   <meta charset="utf-8" />
   <title>Shopping App</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.min.js"></script>
   <script src="app.js"></script>
   <script src="itemComponent/itemComponent.js"></script>
   <script src="itemsListComponent/itemsListComponent.js"></script>
+  <script src="itemDetailsComponent/itemDetailsComponent.js"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <h2>Shopping Cart Application</h2>
-  <items-list-component></items-list-component>
+  <div>
+    <h2>Shopping Cart Application</h2>
+    <div ng-view></div>
+  </div>
+  
   
 
 </body>

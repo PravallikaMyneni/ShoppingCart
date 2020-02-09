@@ -8,12 +8,23 @@ h4{
     display: block;
     float: left;  
 }
-img{
+img.cardImg{
     margin-top: 7px;
     width: 80%;
     height: 140px;
-    cursor: pointer;
-    
+}
+.cardIcon{
+  width: 24px;
+  height: 24px;
+  padding: 5px 5px 5px 5px;
+  border: 1px solid;
+  border-radius: 24px;
+  background-color: rgb(255, 255, 249);
+  border-color:  rgb(255, 255, 249);
+  box-shadow:  4px 0px 1px rgba(173, 172, 172, 0.2);
+  margin-top: 30px;
+  cursor: pointer;
+
 }
 h5{
     margin-bottom: 0px;
@@ -46,11 +57,11 @@ button{
     border: 1px solid #f1f1f1;
     margin-right: 40px;
     margin-top: 20px;
-    text-align: center;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
   
-  /* This container is needed to position the front and back side */
+  /* This container 
+is needed to position the front and back side */
   .flip-card-inner {
     position: relative;
     width: 100%;
