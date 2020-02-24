@@ -93,3 +93,10 @@ is needed to position the front and back side */
     background-color: rgb(210, 240, 240);
     transform: rotateY(180deg);
   }
+  .details-Img{
+    height: 200px;
+    width: 250px;
+  }
+  .font-med{
+    font-size: 14px;
+  }

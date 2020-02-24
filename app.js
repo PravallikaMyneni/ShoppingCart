@@ -7,4 +7,13 @@ app.config(function($routeProvider) {
     });
 });
 
+app.factory('itemsFactory', ['$http',function ($http) {
+    var itemsFactoryObj = {};
+    itemsFactoryObj.getAllItemsList = function () {
+        return $http.get('sampledata.json');
+    }
+   
+    return itemsFactoryObj;
+}]);
+
 
