@@ -59,7 +59,7 @@
         "ID": "009",
         "Name": "Canyon Handbag",
         "ImgSrc": "images/img9.jpg",
-        "Price":"1900",
+        "Price":"800",
         "Description":"Trendy and casual Wallet of Element Cart is designed for fashionable Black Color Zip Zipper Closure Hand Bagwoman out there. The Bag has 2 compartments & 1 small pockets. The Handbag is perfect for evening as well as casual outings. "
     },
     {
@@ -73,24 +73,28 @@
         "ID": "011",
         "Name": "Platic Bottles",
         "ImgSrc": "images/img11.jpg",
+        "Price":"20",
         "Description":"Manufactured with 100 percent food grade virgin/non toxic plastic, this bottle set is BPA-free, ensuring a healthier lifestyle. These crystal clear bottles are spill proof and easy to pour"
     },
     {
         "ID": "012",
         "Name": "Seve Leather Wallet",
         "ImgSrc": "images/img12.jpg",
+        "Price":"500",
         "Description":"Unique and more useful wallet series in terms of its usage, the choice of elegant and stylish wallet for men! We have made quality men's wallets that are available for all your needs."
     },
     {
         "ID": "013",
         "Name": "Flower Vase",
         "ImgSrc": "images/img13.jpg",
+        "Price":"730",
         "Description":"This gorgeous vase is a must have to liven up the corners of your house,office ,etc. Its beautiful colour and attractive design makes it the perfect gift for friends and family for festivals,birthdays, anniversaries,house-warming parties etc."
     },
     {
         "ID": "014",
         "Name": "Misek Bookshelf",
         "ImgSrc": "images/img14.jpg",
+        "Price":"3400",
         "Description":"With a special design, decornation’s 3 tiers mdf storage shelf bookcase is aesthetically pleasing and functional. It is not only a storage solution to your house, but also an pretty display in your home."
     }
     ]

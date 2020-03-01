@@ -1,12 +1,22 @@
 
-<div class = "flex-hor">
-    <div>
-        <item-component class="card" ng-repeat="i in shoppingList" shop-item="i" into-cart = "addToCart(i)">
+<div>
+    <details-popup ng-show ="isShowPopup" class = "popup" item-details = "itemToShow" hide-popup = "hidePopup()"></details-popup>
+   
+</div>
+<div class="flex-vertical">
+    <div class="flex-horizontal-rev bottomDiv">
+        <a href="#!viewCart">
+            <div class="cartCount">
+                <img ng-src="/icons/buying_48.png">
+                <label>{{cart.length}}</label>
+            </div>
+        </a>
+    </div>
+    
+    <div class = "bottomDiv">
+        <item-component class="card" ng-repeat="i in shoppingList" shop-item="i" into-cart = "addToCart(i)" view-details = "showDetails(i)">
         </item-component>
     </div>
-    <div>
-        <br><br>
-        <h3>No of items in cart: {{cart.length}}</h3>
-    </div>
 </div>
+
 

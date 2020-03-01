@@ -1,0 +1,17 @@
+
+<div>
+    <ul>
+        <li ng-repeat = "item in ItemsList" class = "flex-horizontal viewcart-row">
+            <img class = "cartrow-img" ng-src="{{item.ImgSrc}}">
+            <div>
+                <h2>{{item.Name}}</h3>
+                <h4>PRICE: {{item.Price | currency}}</h4>
+            </div>
+            <div>
+                <img class = "cart-remove" ng-src="/icons/remove_48.png">
+                <h5>Remove Item</h5>
+            </div>
+
+        </li>
+    </ul>
+</div>

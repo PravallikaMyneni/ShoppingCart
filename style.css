@@ -1,8 +1,5 @@
-
-h4{
-    margin-bottom: 0px;
-    margin-top: 7px;
-    max-height: 40px;
+.showCentre{
+  text-align: center;
 }
 .card{
     display: block;
@@ -14,15 +11,15 @@ img.cardImg{
     height: 140px;
 }
 .cardIcon{
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   padding: 5px 5px 5px 5px;
   border: 1px solid;
   border-radius: 24px;
   background-color: rgb(255, 255, 249);
   border-color:  rgb(255, 255, 249);
   box-shadow:  4px 0px 1px rgba(173, 172, 172, 0.2);
-  margin-top: 30px;
+  margin-top: 20px;
   cursor: pointer;
 
 }
@@ -45,9 +42,23 @@ button{
     
 }
 
-.flex-hor{
+.flex-vertical{
     display: flex;
     flex-direction: column;
+}
+.flex-horizontal{
+  display: flex;
+  flex-direction: row;
+
+}
+.flex-horizontal-rev{
+  display: flex;
+  flex-direction: row-reverse;
+
+}
+.flex-vertical-rev{
+  display: flex;
+  flex-direction: column-reverse;
 
 }
 .flip-card {
@@ -94,9 +105,97 @@ is needed to position the front and back side */
     transform: rotateY(180deg);
   }
   .details-Img{
-    height: 200px;
-    width: 250px;
+    height: 250px;
+    width: 200px;
   }
   .font-med{
-    font-size: 14px;
+    font-size: 16px;
+  }
+  h4.priceLabel{
+    margin-top: 20px;
+    background-color: azure;
+    
+  }
+  /* cart count*/
+  .cartCount{
+    width: 100px;
+    height: 45px;
+    border: 1px solid;
+    border-radius: 24px;
+    background-color: rgb(238, 238, 235);
+    border-color:  rgb(230, 230, 221);
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+  }
+  .cartCount img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+  }
+  .cartCount label{
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 20px;
+
+  }
+  .bottomDiv{
+     margin-bottom: 20px;;
+  }
+  /* popup modal window*/
+  .popup{
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index:10;
+    background-color:  rgba(131, 131, 131, 0.575);
+  }
+  .popupInner{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    background-color: rgb(234, 235, 238);
+    border: 1px solid;
+    border-color:rgb(234, 235, 238);
+    border-radius: 10px;
+    margin: 8% auto;
+    padding: 10px 20px 20px 20px;
+  }
+  .close-img{
+   font-size: 15px;
+   right: 20px;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   border: 1px solid;
+   border-radius: 20px;
+   border-color: rgb(215, 215, 212);
+   background-color: rgb(215, 215, 212);
+   cursor: pointer;
+   padding: 5px 5px 5px 5px;
+  }
+
+  .viewcart-row{
+    width:60%;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: rgb(209, 231, 247);
+    background-color:rgb(209, 231, 247);
+    margin:10px 10px 10px 10px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .cartrow-img{
+    width: 70px;
+    height: 90px;
+  }
+  .cart-remove{
+    right: 10%;
+    width: 30px;
+    height: 30px;
   }

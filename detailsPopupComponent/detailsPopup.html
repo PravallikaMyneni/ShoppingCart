@@ -1,0 +1,7 @@
+<div class="popupInner">
+    <img class="close-img" ng-click="$ctrl.hidePopup()" ng-src="/icons/close_24.png">
+    <h3>{{$ctrl.itemDetails.Name}}</h3>
+    <img ng-src="{{$ctrl.itemDetails.ImgSrc}}" class="details-Img">
+    <h4>PRICE: {{$ctrl.itemDetails.Price | currency}}</h4>
+    <p class="font-med">{{$ctrl.itemDetails.Description}}</p>
+</div>

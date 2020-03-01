@@ -8,18 +8,20 @@
   <title>Shopping App</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
   <script src="app.js"></script>
   <script src="itemComponent/itemComponent.js"></script>
   <script src="itemsListComponent/itemsListComponent.js"></script>
-  <script src="itemDetailsComponent/itemDetailsComponent.js"></script>
+  <script src="detailsPopupComponent/detailsPopupComponent.js"></script>
+  <script src="viewCartComponent/viewCartComponent.js"></script>
   <link rel="stylesheet" href="style.css" />
   
 </head>
 
 <body>
   <div>
-    <h2>Shopping Cart Application</h2>
-    <div ng-view></div>
+    <h2 style="text-align: center;">SHOPPING CART APPLICATION</h2>
+    <div class = "showCentre" ng-view></div>
   </div>
   
   
