@@ -29,6 +29,15 @@ app.factory('cartFactory', ['$localStorage',function ($localStorage) {
         }
         
     }
+    itemsFactoryObj.removeItemFromCart = function(itemId){
+        var items = JSON.parse($localStorage.cartItems);
+        var filteredItems = items.filter(function(rec){
+            if(rec.ID !== itemId){
+                return rec;
+            }
+        });
+        $localStorage.cartItems = JSON.stringify(filteredItems);
+    }
    
     return itemsFactoryObj;
 }]);

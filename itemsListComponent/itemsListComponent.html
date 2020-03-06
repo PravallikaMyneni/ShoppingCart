@@ -1,8 +1,9 @@
-
+<!--popup for item details -->
 <div>
     <details-popup ng-show ="isShowPopup" class = "popup" item-details = "itemToShow" hide-popup = "hidePopup()"></details-popup>
    
 </div>
+<!-- Cart count -->
 <div class="flex-vertical">
     <div class="flex-horizontal-rev bottomDiv">
         <a href="#!viewCart">
@@ -12,9 +13,9 @@
             </div>
         </a>
     </div>
-    
+    <!-- items list -->
     <div class = "bottomDiv">
-        <item-component class="card" ng-repeat="i in shoppingList" shop-item="i" into-cart = "addToCart(i)" view-details = "showDetails(i)">
+        <item-component class="card" ng-repeat="i in shoppingList" shop-item="i" into-cart = "addToCart(i)" view-details = "showDetails(i)" check-for-item-cart = "checkItemInCart(i.ID)">
         </item-component>
     </div>
 </div>

@@ -1,14 +1,15 @@
 
 <div class="flip-card">
+	<!-- Front side item details -->
 	<div class="flip-card-inner">
 		<div class="flip-card-front">
 			<img class = "cardImg" ng-src="{{$ctrl.shopItem.ImgSrc}}">
 			<h4>{{$ctrl.shopItem.Name}}</h4>
 		</div>
+		<!-- Back side item buttons -->
 		<div class="flip-card-back">
-			<!--<a href = "#!itemDetails/{{$ctrl.shopItem.ID}}"><img class = "cardIcon" ng-src = "/icons/moreDetails_24.png"  ng-click = "$ctrl.viewDetails($ctrl.shopItem)"></a><br>-->
 			<img class = "cardIcon" ng-src = "/icons/moreDetails_24.png"  ng-click = "$ctrl.viewDetails($ctrl.shopItem)"><br>
-			<img class = "cardIcon" ng-click="added = true; $ctrl.intoCart(); " ng-show="!added" ng-src = "/icons/addCart_24.png">
+			<img class = "cardIcon" ng-click="$ctrl.intoCart(); added = $ctrl.checkForItemCart();" ng-show="!added" ng-src = "/icons/addCart_24.png">
 			<img  class = "cardIcon" ng-show="added" ng-src = "/icons/addedCart_24.png">
 			<h4 class = "priceLabel">{{$ctrl.shopItem.Price | currency}}</h4>
 		</div>

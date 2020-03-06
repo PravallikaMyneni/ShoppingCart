@@ -1,5 +1,5 @@
 .showCentre{
-  text-align: center;
+  text-align: -webkit-center;
 }
 .card{
     display: block;
@@ -26,7 +26,6 @@ img.cardImg{
 h5{
     margin-bottom: 0px;
     margin-top: 10px;
-    color: brown;
 }
 .add{
     margin-top: 40px;
@@ -127,6 +126,7 @@ is needed to position the front and back side */
     display: flex;
     align-items: center;
     margin-right: 60px;
+    text-decoration: none;
   }
   .cartCount img{
     height: 30px;
@@ -137,6 +137,8 @@ is needed to position the front and back side */
     margin-left: 10px;
     font-weight: 600;
     font-size: 20px;
+    text-decoration: none;
+    color: black;
 
   }
   .bottomDiv{
@@ -181,21 +183,50 @@ is needed to position the front and back side */
   }
 
   .viewcart-row{
-    width:60%;
+    width:50%;
     border: 1px solid;
     border-radius: 5px;
     border-color: rgb(209, 231, 247);
     background-color:rgb(209, 231, 247);
     margin:10px 10px 10px 10px;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    align-items: stretch;
   }
   .cartrow-img{
     width: 70px;
     height: 90px;
+    margin-left: 50px;
   }
   .cart-remove{
+    margin-top: 20px;
     right: 10%;
     width: 30px;
     height: 30px;
+  }
+  .delete-icon{
+    background-color: lightcoral;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .emptyCart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height:300px;
+    background-color: rgb(234, 235, 238);
+    border: 1px solid;
+    border-color:rgb(234, 235, 238);
+    border-radius: 10px;
+    margin: 5% auto;
+
+  }
+  .emptyCart img{
+    width: 35px;
+    height: 35px;
+
   }

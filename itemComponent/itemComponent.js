@@ -6,7 +6,9 @@ app.component("itemComponent", {
 	bindings:{
 		shopItem : '<',
 		intoCart : '&',
-		viewDetails : '&'
+		viewDetails : '&',
+		checkForItemCart : '&'
+
 	},
 	
 });

@@ -1,15 +1,16 @@
-var app = angular.module("itemsListApp", []);
+var app = angular.module("itemsListApp", ['ngStorage']);
 
 
 app.component("itemsListComponent", {
 	templateUrl: "itemsListComponent/itemsListComponent.html",
 
-    controller : function($scope,itemsFactory,cartFactory){
+    controller : function($scope,itemsFactory,cartFactory,$localStorage){
 	
 		$scope.cart = [];
 		$scope.shoppingList = [];
 		$scope.itemToShow ;
 		$scope.isShowPopup = false;
+		$scope.isItemAddedToCart = false;
 
 		//fetch all items from the factory method
 		 itemsFactory.getAllItemsList().then(function (response) {
@@ -35,6 +36,18 @@ app.component("itemsListComponent", {
 		$scope.getCartItems = function(){
 			var cartItems = JSON.parse($localStorage.cartItems);
 			return cartItems;
+		}
+		//check if given item is added to cart
+		$scope.checkItemInCart = function(id){
+			var cartItems = $scope.getCartItems();
+			var isExists = false;
+			for(var i=0;i< cartItems.length;i++){
+				if(cartItems[i].ID === id){
+					isExists = true;
+					break;
+				}
+			}
+			return isExists;
 		}
 	}
 	
