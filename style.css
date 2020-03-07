@@ -230,3 +230,15 @@ is needed to position the front and back side */
     height: 35px;
 
   }
+  .total-amount{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height:70px;
+    background-color: rgb(234, 235, 238);
+    border: 1px solid;
+    border-color:rgb(234, 235, 238);
+    border-radius: 10px;
+  }

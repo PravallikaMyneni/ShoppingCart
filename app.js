@@ -3,7 +3,7 @@ app.config(function($routeProvider) {
     $routeProvider.when('/',{
         template : '<items-list-component></items-list-component>'
     }).when('/viewCart',{
-        template : '<view-cart></view-cart>'
+        templateUrl : '/cartPage/cartPage.html'
     });
 });
 
@@ -18,8 +18,10 @@ app.factory('itemsFactory', ['$http',function ($http) {
 
 app.factory('cartFactory', ['$localStorage',function ($localStorage) {
     var itemsFactoryObj = {};
-    itemsFactoryObj.addtoCart = function (items) {
-        $localStorage.cartItems = JSON.stringify(items);
+    itemsFactoryObj.addtoCart = function (item) {
+        var cartItems = itemsFactoryObj.getCartItems();
+        cartItems.push(item);
+        $localStorage.cartItems = JSON.stringify(cartItems);
     }
     itemsFactoryObj.getCartItems = function () {
         if($localStorage.cartItems){

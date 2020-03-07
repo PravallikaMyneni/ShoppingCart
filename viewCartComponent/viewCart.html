@@ -1,3 +1,4 @@
+<!--  List of items in cart-->
 <div ng-show = "(ItemsList.length > 0)" style="margin-top: 50px;">
     <ul>
         <li ng-repeat = "item in ItemsList" class = "flex-horizontal viewcart-row">
@@ -14,6 +15,7 @@
         </li>
     </ul>
 </div>
+<!-- Show no items in cart-->
 <div ng-show = "(ItemsList.length === 0)" class="emptyCart">
     <img ng-src="/icons/emptyCart_48.png"><br>
     <p class = "font-med">No items added to the cart yet.</p>
