@@ -2,6 +2,9 @@ var app = angular.module("viewCartApp", []);
 app.component("viewCart", {
     
     templateUrl: "viewCartComponent/viewCart.html",
+    bindings:{
+        updatePrice:'&'
+    },
     controller :function($scope,cartFactory){
         $scope.ItemsList;
         

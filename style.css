@@ -117,7 +117,6 @@ is needed to position the front and back side */
   }
   /* cart count*/
   .cartCount{
-    width: 100px;
     height: 45px;
     border: 1px solid;
     border-radius: 24px;
@@ -139,6 +138,7 @@ is needed to position the front and back side */
     font-size: 20px;
     text-decoration: none;
     color: black;
+    margin-right: 20px;
 
   }
   .bottomDiv{
@@ -181,7 +181,10 @@ is needed to position the front and back side */
    cursor: pointer;
    padding: 5px 5px 5px 5px;
   }
-
+  .simple-list{
+    list-style-type : none;
+    padding: 0px;
+  }
   .viewcart-row{
     width:50%;
     border: 1px solid;
@@ -233,7 +236,7 @@ is needed to position the front and back side */
   .total-amount{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 50%;
     height:70px;
@@ -241,4 +244,8 @@ is needed to position the front and back side */
     border: 1px solid;
     border-color:rgb(234, 235, 238);
     border-radius: 10px;
+    margin-top: 20px;
+  }
+  .total-amount p{
+    margin: 5px;
   }

@@ -1,13 +1,13 @@
 <!--  List of items in cart-->
 <div ng-show = "(ItemsList.length > 0)" style="margin-top: 50px;">
-    <ul>
+    <ul class = "simple-list">
         <li ng-repeat = "item in ItemsList" class = "flex-horizontal viewcart-row">
             <img class = "cartrow-img" ng-src="{{item.ImgSrc}}">
             <div>
                 <h3>{{item.Name}}</h3>
                 <h4>Price: {{item.Price | currency}}</h4>
             </div>
-            <div class = "delete-icon" ng-click = "onClickOfRemove(item.ID)">
+            <div class = "delete-icon" ng-click = "onClickOfRemove(item.ID); $ctrl.updatePrice();">
                 <img class = "cart-remove" ng-src="/icons/remove_48.png">
                 <h5>Remove Item</h5>
             </div>

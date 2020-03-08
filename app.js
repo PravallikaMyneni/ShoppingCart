@@ -1,9 +1,10 @@
-var app = angular.module("shoppingApp", ['ngRoute','itemsListApp','itemApp','detailsPopupApp','viewCartApp','ngStorage']);
+var app = angular.module("shoppingApp", ['ngRoute','itemsListApp','itemApp','detailsPopupApp','viewCartApp','cartPageApp','ngStorage']);
 app.config(function($routeProvider) {
     $routeProvider.when('/',{
         template : '<items-list-component></items-list-component>'
     }).when('/viewCart',{
-        templateUrl : '/cartPage/cartPage.html'
+        templateUrl : '/cartPage/cartPage.html',
+        controller : 'cartPageCtrl'
     });
 });
 
