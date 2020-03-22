@@ -1,20 +1,26 @@
-<div>
+<div >
     <!-- back navigation -->
     <div class="flex-horizontal bottomDiv">
         <a href="#!">
             <div class="cartCount">
-                <img ng-src="/icons/back_24.png">
+                <img class = "size-25" ng-src="/icons/back_24.png">
                 <label>BACK</label>
             </div>
         </a>
     </div>
 
     <!-- view cart list component -->
-    <view-cart update-price = "updatePrice()"></view-cart>
+    <div class = "cart-list">
+        <view-cart update-price = "updatePrice()"></view-cart>
+    </div>
+    
 
     <!-- show total items count and cost-->
-    <div class="total-amount" ng-if= "totalItems > 0">
-        <p class="font-med">Number of items : {{totalItems}}</p>
-        <p class="font-med">Total amount : {{totalCost | currency}}</p>
+    <div class="total-container" ng-if= "totalItems > 0">
+        <div class="total-amount">
+            <h4 class="font-med">Number of items : {{totalItems}}</h4>
+            <h4 class="font-med">Total amount : {{totalCost | currency}}</h4>
+        </div>
     </div>
+    
 </div>

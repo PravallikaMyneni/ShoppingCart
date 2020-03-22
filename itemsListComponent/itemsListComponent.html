@@ -3,20 +3,32 @@
     <details-popup ng-show ="isShowPopup" class = "popup" item-details = "itemToShow" hide-popup = "hidePopup()"></details-popup>
    
 </div>
-<!-- Cart count -->
+<!-- header group -->
 <div class="flex-vertical">
-    <div class="flex-horizontal-rev bottomDiv">
+    <div class="flex-horizontal-rev bottomDiv align-to-end">
+        <!-- Cart count -->
         <a href="#!viewCart">
             <div class="cartCount">
-                <img ng-src="/icons/buying_48.png">
+                <img  class= "size-30" ng-src="/icons/buying_48.png">
                 <label>{{cart.length}}</label>
             </div>
         </a>
+        <!-- search box -->
+        <div class = "cartCount">
+            <input class = "search-box" type="text" ng-model = "searchText">
+            <img class= "size-25 search-icon" ng-src="/icons/search_24.png">
+        </div>
     </div>
     <!-- items list -->
-    <div class = "bottomDiv">
-        <item-component class="card" ng-repeat="i in shoppingList" shop-item="i" into-cart = "addToCart(i)" view-details = "showDetails(i)" check-for-item-cart = "checkItemInCart(i.ID)">
+    <div class="bottomDiv">
+        <item-component class="card" ng-repeat="i in shoppingList | filter : searchText" shop-item="i"
+            into-cart="addToCart(i)" view-details="showDetails(i)" check-for-item-cart="checkItemInCart(i.ID)">
         </item-component>
+        <!-- Show no items in cart-->
+        <div ng-show="(ItemsList.length === 0)" class="emptyCart">
+            <img ng-src="/icons/emptyCart_48.png"><br>
+            <p class="font-med">No items added to the cart yet.</p>
+        </div>
     </div>
 </div>
 
